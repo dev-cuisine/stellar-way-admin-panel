@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState, useEffect, FormEvent } from "react";
-import toast, { Toaster } from "react-hot-toast";
+
 import {
   IoAddOutline,
   IoCreateOutline,
@@ -16,6 +16,7 @@ import {
   createCategoryApi,
   updateCategoryApi,
 } from "@/app/modules/category/category.api";
+import toast from "react-hot-toast";
 
 const CategoryPage: React.FC = () => {
   const [categories, setCategories] = useState<any[]>([]);

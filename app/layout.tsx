@@ -32,8 +32,14 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <AuthProvider>
-          <Toaster/>
           <Providers> {children}</Providers>
+          <Toaster
+            position="top-center"
+            reverseOrder={false}
+            toastOptions={{
+              duration: 3000,
+            }}
+          />
         </AuthProvider>
       </body>
     </html>

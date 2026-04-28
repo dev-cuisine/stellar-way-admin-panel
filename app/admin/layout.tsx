@@ -25,12 +25,11 @@ import {
   IoBarChartOutline,
   IoHelpCircleOutline,
 } from "react-icons/io5";
-import { SiAirtable } from "react-icons/si";
-import { Toaster } from "react-hot-toast";
 import logo from "@/assets/img/flogo.png";
 import Image from "next/image";
 import { signOut } from "next-auth/react";
 import { LucideMessageSquareMore } from "lucide-react";
+import { MdOutlineTableRestaurant } from "react-icons/md";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -106,7 +105,11 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
       icon: <IoChatbubblesOutline />,
       path: "/admin/feedback",
     },
-    { name: "Tables", icon: <SiAirtable />, path: "/admin/table" },
+    {
+      name: "Tables",
+      icon: <MdOutlineTableRestaurant />,
+      path: "/admin/table",
+    },
     { name: "Events", icon: <IoCalendarOutline />, path: "/admin/events" },
     {
       name: "Event Booking",
@@ -149,8 +152,6 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
 
   return (
     <div className="flex min-h-screen bg-[#FDFCFD] font-sans antialiased">
-      <Toaster position="top-center" reverseOrder={false} />
-
       {/* DESKTOP SIDEBAR */}
       <aside className="hidden lg:block w-64 fixed inset-y-0 left-0 z-50">
         <SidebarContent

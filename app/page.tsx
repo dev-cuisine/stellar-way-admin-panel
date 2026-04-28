@@ -18,7 +18,6 @@ const AdminLoginPage = () => {
     password: "",
   });
 
-
   useEffect(() => {
     if (Object.keys(errors).length > 0) {
       setErrors({});
@@ -47,6 +46,7 @@ const AdminLoginPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     if (!validate()) {
       toast.error("Please fill up the email and password field");
       return;
@@ -62,26 +62,16 @@ const AdminLoginPage = () => {
       });
 
       if (res?.error) {
-        toast.error(
-          res.error === "CredentialsSignin"
-            ? "Invalid Email or Password"
-            : res.error,
-        );
+        toast.error(res.error);
         setLoading(false);
         return;
       }
 
-      // Session role check
-      const sessionRes = await fetch("/api/auth/session");
-      const session = await sessionRes.json();
 
-      if (session?.user?.role !== "admin") {
-        toast.error("Access Denied: You are not an admin!");
-        setLoading(false);
-        return;
-      }
+      await new Promise((resolve) => setTimeout(resolve, 500));
 
       toast.success("Welcome back, Admin!");
+
       router.push("/admin");
       router.refresh();
     } catch (error) {

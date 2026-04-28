@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import {
   IoTrashOutline,
   IoCloudUploadOutline,
@@ -87,7 +87,6 @@ const GalleryManagementPage = () => {
 
   return (
     <div className=" min-h-screen ">
-      <Toaster position="top-center" />
 
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-center gap-6 mb-10">
