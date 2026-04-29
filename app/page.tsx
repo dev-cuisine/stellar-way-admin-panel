@@ -7,6 +7,8 @@ import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import AuthForm from "@/components/AuthForm";
 import { IoShieldCheckmarkOutline, IoLockClosedOutline } from "react-icons/io5";
+import Image from "next/image";
+import logo from "@/assets/img/flogo.png";
 
 const AdminLoginPage = () => {
   const [loading, setLoading] = useState(false);
@@ -90,9 +92,7 @@ const AdminLoginPage = () => {
       <div className="bg-white/80 backdrop-blur-md p-8 md:p-12 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] w-full max-w-md border border-white/20 relative z-10">
         {/* Logo or Icon Section */}
         <div className="flex flex-col items-center mb-8">
-          <div className="w-16 h-16 bg-[#1A4E11] rounded-2xl flex items-center justify-center text-white shadow-lg shadow-green-900/20 mb-4 rotate-3">
-            <IoShieldCheckmarkOutline size={32} />
-          </div>
+          <Image className="pb-6" src={logo} width={200} height={200} alt="logo"/>
           <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter italic">
             Admin <span className="text-[#1A4E11]">Portal</span>
           </h2>

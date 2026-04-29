@@ -23,6 +23,41 @@ import {
   changePasswordApi,
 } from "@/app/modules/auth/auth.api";
 
+const ProfileSkeleton = () => (
+  <div className="max-w-6xl mx-auto p-6 space-y-10 animate-pulse">
+    {/* Title Skeleton */}
+    <div className="border-l-8 border-gray-200 pl-6 space-y-2">
+      <div className="h-10 w-64 bg-gray-200 rounded-lg"></div>
+      <div className="h-3 w-40 bg-gray-100 rounded-md"></div>
+    </div>
+
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      {/* Left Card Skeleton */}
+      <div className="lg:col-span-2 bg-white rounded-[40px] border border-gray-100 p-8 flex flex-col md:flex-row gap-10">
+        <div className="w-40 h-40 rounded-[48px] bg-gray-200"></div>
+        <div className="flex-1 space-y-6 py-2">
+          <div className="h-8 w-1/2 bg-gray-200 rounded-lg"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="h-12 bg-gray-50 rounded-2xl"></div>
+            <div className="h-12 bg-gray-50 rounded-2xl"></div>
+          </div>
+          <div className="h-10 w-32 bg-gray-200 rounded-xl"></div>
+        </div>
+      </div>
+      {/* Right Card Skeleton */}
+      <div className="bg-gray-100 rounded-[40px] p-8 space-y-6">
+        <div className="h-6 w-32 bg-gray-200 rounded-md"></div>
+        <div className="space-y-4">
+          <div className="h-12 bg-gray-200/50 rounded-xl"></div>
+          <div className="h-12 bg-gray-200/50 rounded-xl"></div>
+          <div className="h-12 bg-gray-200/50 rounded-xl"></div>
+        </div>
+        <div className="h-14 bg-gray-200 rounded-2xl"></div>
+      </div>
+    </div>
+  </div>
+);
+
 const AdminProfilePage = () => {
   const { data: session, update } = useSession();
 
@@ -47,7 +82,6 @@ const AdminProfilePage = () => {
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-
   // ── Load Profile Logic ──
   const loadProfile = useCallback(async () => {
     const userId = session?.user?.id;
@@ -56,7 +90,7 @@ const AdminProfilePage = () => {
     try {
       setLoading(true);
       const res: any = await getMeApi(userId);
-      console.log(res)
+      console.log(res);
       if (res.success && res.data) {
         const profileData = res.data.user || res.data;
         setUser(profileData);
@@ -159,8 +193,8 @@ const AdminProfilePage = () => {
 
   if (loading)
     return (
-      <div className="flex justify-center items-center h-screen animate-pulse font-black text-gray-400">
-        LOADING CORE...
+      <div>
+        <ProfileSkeleton />
       </div>
     );
 
