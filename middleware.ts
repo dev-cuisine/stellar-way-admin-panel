@@ -1,32 +1,25 @@
 import { withAuth } from "next-auth/middleware";
 import { NextResponse } from "next/server";
 
+// middleware.ts
 export default withAuth(
   function middleware(req) {
     const token = req.nextauth?.token;
     const pathname = req.nextUrl.pathname;
 
-    // =========================
-    // NOT LOGGED IN
-    // =========================
-    if (!token) {
-      if (pathname.startsWith("/admin")) {
-        return NextResponse.redirect(new URL("/", req.url));
-      }
-      return NextResponse.next();
-    }
+    // টোকেন আছে কি না তা নিশ্চিত করুন
+    const isAuth = !!token;
+    const isAdmin = token?.role === "admin";
 
-    // =========================
-    // NOT ADMIN
-    // =========================
-    if (token.role !== "admin") {
+    if (!isAuth && pathname.startsWith("/admin")) {
       return NextResponse.redirect(new URL("/", req.url));
     }
 
-    // =========================
-    // ALREADY LOGGED IN ADMIN
-    // =========================
-    if (pathname === "/") {
+    if (isAuth && !isAdmin && pathname.startsWith("/admin")) {
+      return NextResponse.redirect(new URL("/", req.url));
+    }
+
+    if (isAuth && isAdmin && pathname === "/") {
       return NextResponse.redirect(new URL("/admin", req.url));
     }
 
@@ -34,7 +27,7 @@ export default withAuth(
   },
   {
     callbacks: {
-      authorized: () => true,
+      authorized: () => true, 
     },
   },
 );

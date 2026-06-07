@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
@@ -6,13 +7,14 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import AuthForm from "@/components/AuthForm";
-import { IoShieldCheckmarkOutline, IoLockClosedOutline } from "react-icons/io5";
+import { IoLockClosedOutline } from "react-icons/io5";
 import Image from "next/image";
 import logo from "@/assets/img/flogo.png";
 
 const AdminLoginPage = () => {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<any>({});
+
   const router = useRouter();
 
   const [formData, setFormData] = useState({
@@ -60,7 +62,7 @@ const AdminLoginPage = () => {
       const res = await signIn("credentials", {
         email: formData.email,
         password: formData.password,
-        redirect: false,
+        redirect: false, // এটি ফলস রাখতে হবে যাতে আমরা ম্যানুয়ালি হ্যান্ডেল করতে পারি
       });
 
       if (res?.error) {
@@ -69,13 +71,11 @@ const AdminLoginPage = () => {
         return;
       }
 
-
       await new Promise((resolve) => setTimeout(resolve, 500));
 
       toast.success("Welcome back, Admin!");
 
-      router.push("/admin");
-      router.refresh();
+      window.location.href = "/admin";
     } catch (error) {
       toast.error("Something went wrong. Please try again.");
     } finally {
@@ -90,9 +90,15 @@ const AdminLoginPage = () => {
       <div className="absolute bottom-[-10%] right-[-5%] w-96 h-96 bg-[#1A4E11]/10 rounded-full blur-3xl"></div>
 
       <div className="bg-white/80 backdrop-blur-md p-8 md:p-12 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] w-full max-w-md border border-white/20 relative z-10">
-        {/* Logo or Icon Section */}
+        {/* Logo Section */}
         <div className="flex flex-col items-center mb-8">
-          <Image className="pb-6" src={logo} width={200} height={200} alt="logo"/>
+          <Image
+            className="pb-6"
+            src={logo}
+            width={200}
+            height={200}
+            alt="logo"
+          />
           <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tighter italic">
             Admin <span className="text-[#1A4E11]">Portal</span>
           </h2>
@@ -116,7 +122,7 @@ const AdminLoginPage = () => {
         {/* Footer Info */}
         <div className="mt-8 pt-6 border-t border-dashed border-gray-100 flex items-center justify-center gap-2 text-gray-400">
           <IoLockClosedOutline size={12} />
-          <p className="text-[9px] font-black uppercase tracking-widest">
+          <p className="text-[10px] font-black uppercase tracking-widest">
             End-to-End Encrypted Session
           </p>
         </div>
