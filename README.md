@@ -1,10 +1,10 @@
-# 🛡️ Stellar Way — Admin Panel
+#  Stellar Way — Admin Panel
 
 The official admin dashboard for the **Stellar Way** e-commerce & delivery platform. Built with **Next.js 16** and deployed on Vercel, it gives administrators full control over orders, riders, users, and platform analytics.
 
 ---
 
-## 🌐 Live URL
+##  Live URL
 
 > [https://stellar-way-admin.vercel.app](https://stellar-way-admin.vercel.app)
 
