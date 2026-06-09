@@ -50,7 +50,7 @@ The official admin dashboard for the **Stellar Way** e-commerce & delivery platf
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/stellar-way-admin.git
+git clone https://github.com/dev-cuisine/stellar-way-admin-panel
 cd stellar-way-admin
 npm install
 ```
@@ -151,4 +151,4 @@ This project is private and proprietary. All rights reserved.
 
 ---
 
-> Part of the [Stellar Way](https://github.com/imamhossenbu/stellar-way) platform · Powered by [Next.js](https://nextjs.org)
+> Part of the [Stellar Way](https://github.com/dev-cuisine/stellar-way-admin-panel) platform · Powered by [Next.js](https://nextjs.org)
