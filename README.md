@@ -28,24 +28,6 @@ A comprehensive admin dashboard built with Next.js 16 and TypeScript. Admins can
 
 ---
 
-##  Admin Routes
-
-| Route | Description |
-|---|---|
-| `/login` | Admin login page |
-| `/dashboard` | Main overview dashboard |
-| `/orders` | Order management |
-| `/orders/:id` | Order detail view |
-| `/riders` | Rider list and management |
-| `/riders/applications` | Pending rider applications |
-| `/users` | Customer account management |
-| `/analytics` | Revenue and delivery charts |
-| `/tracking` | Live delivery map |
-| `/notifications` | Platform alerts and notifications |
-| `/settings` | Admin settings |
-
----
-
 ##  Credentials
 
 | Role | Email | Password |
