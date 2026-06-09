@@ -10,19 +10,19 @@ The official admin dashboard for the **Stellar Way** e-commerce & delivery platf
 
 ---
 
-## ✨ Admin Features
+## Admin Features
 
-- 📦 **Order Management** — View, update, and manage all customer orders
-- 🛵 **Rider Management** — Review rider applications, approve/reject, monitor active riders
-- 👤 **User Management** — Manage customer accounts and access
-- 📊 **Analytics Dashboard** — Charts and reports on orders, revenue, and deliveries
-- 🗺️ **Live Delivery Tracking** — Monitor real-time rider locations on map
-- 🔔 **Notifications** — Instant alerts for new orders and rider activity
-- 🔐 **Secure Auth** — Admin-only access via NextAuth.js
+-  **Order Management** — View, update, and manage all customer orders
+-  **Rider Management** — Review rider applications, approve/reject, monitor active riders
+-  **User Management** — Manage customer accounts and access
+-  **Analytics Dashboard** — Charts and reports on orders, revenue, and deliveries
+-  **Live Delivery Tracking** — Monitor real-time rider locations on map
+-  **Notifications** — Instant alerts for new orders and rider activity
+-  **Secure Auth** — Admin-only access via NextAuth.js
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
