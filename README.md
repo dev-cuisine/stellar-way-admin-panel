@@ -40,7 +40,7 @@ The official admin dashboard for the **Stellar Way** e-commerce & delivery platf
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -65,7 +65,7 @@ NEXTAUTH_SECRET=your_nextauth_secret
 NEXTAUTH_URL=https://stellar-way-admin.vercel.app
 ```
 
-> ⚠️ **Never commit your `.env.local` file to version control.** Make sure `.env.local` is listed in your `.gitignore`.
+>  **Never commit your `.env.local` file to version control.** Make sure `.env.local` is listed in your `.gitignore`.
 
 ### Run Development Server
 
@@ -79,7 +79,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 stellar-way-admin/
@@ -99,7 +99,7 @@ stellar-way-admin/
 
 ---
 
-## 📜 Available Scripts
+## Available Scripts
 
 | Command | Description |
 |---|---|
@@ -110,7 +110,7 @@ stellar-way-admin/
 
 ---
 
-## 🔌 API & Real-Time
+##  API & Real-Time
 
 - **REST API** — All data is fetched from `https://stellar-way-server.onrender.com/api/v1`
 - **Socket.IO** — Real-time order and rider status updates streamed to the dashboard
