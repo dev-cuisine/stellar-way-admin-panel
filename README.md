@@ -12,23 +12,23 @@ A comprehensive admin dashboard built with Next.js 16 and TypeScript. Admins can
 
 ## Features
 
-- 📦 **Order Management** — View, update, and manage all customer orders
-- 🛵 **Rider Management** — Review rider applications, approve/reject, monitor active riders
-- 👤 **User Management** — Manage customer accounts and access
-- 📊 **Analytics Dashboard** — Charts and reports on orders, revenue, and deliveries
-- 🗺️ **Live Delivery Tracking** — Monitor real-time rider locations on map
-- 🔔 **Notifications** — Instant alerts for new orders and rider activity
-- 🔐 **Secure Auth** — Admin-only access via NextAuth.js
+- **Order Management** — View, update, and manage all customer orders
+- **Rider Management** — Review rider applications, approve/reject, monitor active riders
+- **User Management** — Manage customer accounts and access
+- **Analytics Dashboard** — Charts and reports on orders, revenue, and deliveries
+- **Live Delivery Tracking** — Monitor real-time rider locations on map
+- **Notifications** — Instant alerts for new orders and rider activity
+- **Secure Auth** — Admin-only access via NextAuth.js
 
 ---
 
-## 🌐 Live URL
+## Live URL
 
 > [https://stellar-way-admin.vercel.app](https://stellar-way-admin.vercel.app)
 
 ---
 
-## 🔑 Credentials
+##  Credentials
 
 | Role | Email | Password |
 |---|---|---|
@@ -36,7 +36,7 @@ A comprehensive admin dashboard built with Next.js 16 and TypeScript. Admins can
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 
@@ -46,8 +46,8 @@ A comprehensive admin dashboard built with Next.js 16 and TypeScript. Admins can
 ### Steps
 
 ```bash
-git clone https://github.com/imamhossenbu/stellar-way-admin
-cd stellar-way-admin
+git clone https://github.com/dev-cuisine/stellar-way-admin-panel
+cd stellar-way-admin-panel
 npm install
 npm run dev
 ```
@@ -56,7 +56,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🔐 Environment Variables
+##  Environment Variables
 
 Create a `.env.local` file in the project root:
 
@@ -66,4 +66,4 @@ NEXTAUTH_SECRET=your_nextauth_secret
 NEXTAUTH_URL=http://localhost:3000
 ```
 
-> ⚠️ **Never commit your `.env.local` file to version control.**
+>  **Never commit your `.env.local` file to version control.**
