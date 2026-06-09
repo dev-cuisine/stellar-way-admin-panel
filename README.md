@@ -117,7 +117,7 @@ stellar-way-admin/
 
 ---
 
-## 🚢 Deployment
+##  Deployment
 
 This admin panel is deployed on **Vercel**.
 
@@ -136,7 +136,7 @@ This admin panel is deployed on **Vercel**.
 
 ---
 
-## 🔐 Security Notes
+## Security Notes
 
 - This panel is restricted to authorized admin accounts only
 - All API requests are authenticated via session tokens managed by NextAuth.js
