@@ -4,7 +4,7 @@ The official admin dashboard for the **Stellar Way** e-commerce & delivery platf
 
 ---
 
-## Description
+##  Description
 
 A comprehensive admin dashboard built with Next.js 16 and TypeScript. Admins can manage orders, approve or reject rider applications, monitor live deliveries on a map, view analytics charts, and handle all platform users — all secured with NextAuth.js role-based authentication.
 
@@ -12,19 +12,37 @@ A comprehensive admin dashboard built with Next.js 16 and TypeScript. Admins can
 
 ## Features
 
-- **Order Management** — View, update, and manage all customer orders
-- **Rider Management** — Review rider applications, approve/reject, monitor active riders
-- **User Management** — Manage customer accounts and access
-- **Analytics Dashboard** — Charts and reports on orders, revenue, and deliveries
-- **Live Delivery Tracking** — Monitor real-time rider locations on map
-- **Notifications** — Instant alerts for new orders and rider activity
-- **Secure Auth** — Admin-only access via NextAuth.js
+-  **Order Management** — View, update, and manage all customer orders
+-  **Rider Management** — Review rider applications, approve/reject, monitor active riders
+-  **User Management** — Manage customer accounts and access
+-  **Analytics Dashboard** — Charts and reports on orders, revenue, and deliveries
+-  **Live Delivery Tracking** — Monitor real-time rider locations on map
+-  **Notifications** — Instant alerts for new orders and rider activity
+-  **Secure Auth** — Admin-only access via NextAuth.js
 
 ---
 
-## Live URL
+##  Live URL
 
 > [https://stellar-way-admin.vercel.app](https://stellar-way-admin.vercel.app)
+
+---
+
+##  Admin Routes
+
+| Route | Description |
+|---|---|
+| `/login` | Admin login page |
+| `/dashboard` | Main overview dashboard |
+| `/orders` | Order management |
+| `/orders/:id` | Order detail view |
+| `/riders` | Rider list and management |
+| `/riders/applications` | Pending rider applications |
+| `/users` | Customer account management |
+| `/analytics` | Revenue and delivery charts |
+| `/tracking` | Live delivery map |
+| `/notifications` | Platform alerts and notifications |
+| `/settings` | Admin settings |
 
 ---
 
@@ -32,11 +50,12 @@ A comprehensive admin dashboard built with Next.js 16 and TypeScript. Admins can
 
 | Role | Email | Password |
 |---|---|---|
-| Admin | `admin@stellarway.com` | `admin123` |
+| Admin | `imam30@gmail.com` | `234567` |
+
 
 ---
 
-## Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 
@@ -66,4 +85,3 @@ NEXTAUTH_SECRET=your_nextauth_secret
 NEXTAUTH_URL=http://localhost:3000
 ```
 
->  **Never commit your `.env.local` file to version control.**
